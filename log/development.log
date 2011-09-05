@@ -1652,3 +1652,366 @@ Rendered layouts/_footer.html.erb (8.7ms)
 Rendered pages/home.html.erb within layouts/application (38.5ms)
 Completed 200 OK in 71ms (Views: 70.9ms | ActiveRecord: 0.0ms)
 DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /home/michael/rails_projects/sample_app/config/environment.rb:5)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /home/michael/rails_projects/sample_app/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-01 10:55:42 -0400
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (1.7ms)
+Rendered layouts/_header.html.erb (1.8ms)
+Rendered layouts/_footer.html.erb (2.0ms)
+Rendered pages/home.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 39ms (Views: 38.5ms | ActiveRecord: 0.0ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /home/michael/rails_projects/sample_app/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-01 11:07:53 -0400
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (1.4ms)
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (1.0ms)
+Rendered pages/home.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-09-01 11:08:11 -0400
+  Processing by SessionsController#new as HTML
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered sessions/new.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 17ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-09-01 11:08:15 -0400
+  Processing by SessionsController#new as HTML
+Rendered layouts/_stylesheets.html.erb (1.7ms)
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (6.2ms)
+Rendered sessions/new.html.erb within layouts/application (92.0ms)
+Completed 200 OK in 101ms (Views: 100.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-09-01 11:09:43 -0400
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OZYx7VDVTwQ1H0IpLW2abLGqoa4nIexiiLKTOXzJtL0=", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+Completed 500 Internal Server Error in 132ms
+
+ActionView::MissingTemplate (Missing template sessions/create with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/home/michael/rails_projects/sample_app/app/views"):
+  
+
+Rendered /home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (2.3ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-09-01 11:10:45 -0400
+  Processing by SessionsController#new as HTML
+Rendered layouts/_stylesheets.html.erb (1.2ms)
+Rendered layouts/_header.html.erb (1.6ms)
+Rendered layouts/_footer.html.erb (1.1ms)
+Rendered sessions/new.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 35ms (Views: 34.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-09-01 11:10:47 -0400
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OZYx7VDVTwQ1H0IpLW2abLGqoa4nIexiiLKTOXzJtL0=", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (1.0ms)
+Rendered sessions/new.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 22ms (Views: 16.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-09-01 11:21:30 -0400
+  Processing by SessionsController#new as HTML
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+Rendered layouts/_header.html.erb (10.2ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered sessions/new.html.erb within layouts/application (25.6ms)
+Completed 200 OK in 35ms (Views: 34.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-09-01 11:21:31 -0400
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OZYx7VDVTwQ1H0IpLW2abLGqoa4nIexiiLKTOXzJtL0=", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = '' LIMIT 1
+Rendered layouts/_stylesheets.html.erb (1.2ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_footer.html.erb (1.8ms)
+Rendered sessions/new.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 369ms (Views: 16.8ms | ActiveRecord: 0.5ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /home/michael/rails_projects/sample_app/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-05 08:06:17 -0400
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (7.4ms)
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_footer.html.erb (6.6ms)
+Rendered pages/home.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 33ms (Views: 32.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-05 08:49:28 -0400
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+ERROR: compiling _app_views_layouts__header_html_erb___813255152_76252670__1012233460 RAISED /home/michael/rails_projects/sample_app/app/views/layouts/_header.html.erb:14: syntax error, unexpected keyword_else, expecting keyword_end
+');	     else 
+   	         ^
+/home/michael/rails_projects/sample_app/app/views/layouts/_header.html.erb:19: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/michael/rails_projects/sample_app/app/views/layouts/_header.html.erb:21: syntax error, unexpected $end, expecting keyword_end
+Function body:           def _app_views_layouts__header_html_erb___813255152_76252670__1012233460(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "layouts/_header";_old_output_buffer = @output_buffer;header = local_assigns[:header];;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('      <header>       
+	');@output_buffer.append= ( link_to logo, root_path );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('        <nav class="round">
+          <ul>
+            <li>');@output_buffer.append= ( link_to "Home", root_path );@output_buffer.safe_concat('</li>
+');	     if signed_in? 
+@output_buffer.safe_concat('            <li>');@output_buffer.append= ( link_to "Profile", current_user );@output_buffer.safe_concat('</li>
+');	     end 
+@output_buffer.safe_concat('            <li>');@output_buffer.append= ( link_to "Help", help_path );@output_buffer.safe_concat('</li>
+');	     if signed_in? 
+@output_buffer.safe_concat('            <li>');@output_buffer.append= ( link_to "Sign out", signout_path, :method => :delete );@output_buffer.safe_concat('</li>
+');	     else 
+@output_buffer.safe_concat('            <li>');@output_buffer.append= ( link_to "Sign in", signin_path );@output_buffer.safe_concat('</li>
+');	     else 
+@output_buffer.safe_concat('          </ul>
+        </nav>
+      </header>
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_view/template.rb:258:in `module_eval'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_view/template.rb:258:in `compile'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_view/template.rb:134:in `block in render'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.9/lib/active_support/notifications.rb:54:in `instrument'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_view/template.rb:127:in `render'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_view/render/partials.rb:333:in `render_partial'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_view/render/partials.rb:262:in `block in render'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.9/lib/active_support/notifications.rb:52:in `block in instrument'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.9/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.9/lib/active_support/notifications.rb:52:in `instrument'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_view/render/partials.rb:260:in `render'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_view/render/partials.rb:378:in `_render_partial'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_view/render/rendering.rb:31:in `render'
+/home/michael/rails_projects/sample_app/app/views/layouts/application.html.erb:10:in `_app_views_layouts_application_html_erb__66070757_76293490__300855428'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_view/template.rb:135:in `block in render'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.9/lib/active_support/notifications.rb:54:in `instrument'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_view/template.rb:127:in `render'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_view/render/layouts.rb:80:in `_render_layout'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_view/render/rendering.rb:62:in `block in _render_template'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.9/lib/active_support/notifications.rb:52:in `block in instrument'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.9/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.9/lib/active_support/notifications.rb:52:in `instrument'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_view/render/rendering.rb:56:in `_render_template'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_view/render/rendering.rb:26:in `render'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/abstract_controller/rendering.rb:93:in `render'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_controller/metal/rendering.rb:17:in `render'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.9/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/michael/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.9/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.9/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/abstract_controller/base.rb:150:in `process_action'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.9/lib/active_support/callbacks.rb:436:in `_run__92153821__process_action__883172466__callbacks'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.9/lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.9/lib/active_support/callbacks.rb:94:in `run_callbacks'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.9/lib/active_support/notifications.rb:52:in `block in instrument'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.9/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.9/lib/active_support/notifications.rb:52:in `instrument'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/abstract_controller/base.rb:119:in `process'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/abstract_controller/rendering.rb:41:in `process'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_controller/metal.rb:138:in `dispatch'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_controller/metal.rb:178:in `block in action'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:148:in `block in call'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:103:in `optimized_each'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:92:in `recognize'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:139:in `call'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_dispatch/routing/route_set.rb:493:in `call'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.3/lib/rack/methodoverride.rb:24:in `call'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.9/lib/active_record/query_cache.rb:32:in `block in call'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.9/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.9/lib/active_record/query_cache.rb:12:in `cache'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.9/lib/active_record/query_cache.rb:31:in `call'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.9/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.9/lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.3/lib/rack/sendfile.rb:107:in `call'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.9/lib/rails/rack/logger.rb:13:in `call'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.3/lib/rack/runtime.rb:17:in `call'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.9/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.3/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_dispatch/middleware/static.rb:30:in `call'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.9/lib/rails/application.rb:168:in `call'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.9/lib/rails/application.rb:77:in `method_missing'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.9/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.3/lib/rack/content_length.rb:13:in `call'
+/home/michael/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.3/lib/rack/handler/webrick.rb:52:in `service'
+/home/michael/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/home/michael/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/home/michael/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered layouts/_header.html.erb (106.8ms)
+Rendered pages/home.html.erb within layouts/application (112.2ms)
+Completed 500 Internal Server Error in 121ms
+
+ActionView::Template::Error (/home/michael/rails_projects/sample_app/app/views/layouts/_header.html.erb:14: syntax error, unexpected keyword_else, expecting keyword_end
+');	     else 
+   	         ^
+/home/michael/rails_projects/sample_app/app/views/layouts/_header.html.erb:19: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/michael/rails_projects/sample_app/app/views/layouts/_header.html.erb:21: syntax error, unexpected $end, expecting keyword_end):
+    11:             <li><%= link_to "Sign out", signout_path, :method => :delete %></li>
+    12: 	    <% else %>
+    13:             <li><%= link_to "Sign in", signin_path %></li>
+    14: 	    <% else %>
+    15:           </ul>
+    16:         </nav>
+    17:       </header>
+  app/views/layouts/application.html.erb:10:in `_app_views_layouts_application_html_erb__66070757_76293490__300855428'
+
+Rendered /home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.7ms)
+Rendered /home/michael/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (20.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-05 08:50:11 -0400
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (9.3ms)
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (452.4ms)
+Rendered layouts/_footer.html.erb (1.0ms)
+Rendered pages/home.html.erb within layouts/application (468.6ms)
+Completed 200 OK in 483ms (Views: 481.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-05 08:50:12 -0400
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (108.1ms)
+Rendered layouts/_footer.html.erb (2.1ms)
+Rendered pages/home.html.erb within layouts/application (122.9ms)
+Completed 200 OK in 136ms (Views: 135.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-09-05 08:50:58 -0400
+  Processing by SessionsController#new as HTML
+Rendered layouts/_stylesheets.html.erb (6.8ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (38.1ms)
+Rendered layouts/_footer.html.erb (1.5ms)
+Rendered sessions/new.html.erb within layouts/application (63.3ms)
+Completed 200 OK in 75ms (Views: 74.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-09-05 08:51:13 -0400
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9vvaWVfRdr1T6vBWJ8sWHcKyIyboaTtn1C3ktLX1Mew=", "session"=>{"email"=>"example@railstutorial.org", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'example@railstutorial.org' LIMIT 1
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 173ms
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-09-05 08:51:14 -0400
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (1.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered layouts/_header.html.erb (3.3ms)
+Rendered layouts/_footer.html.erb (1.0ms)
+Rendered users/show.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 62ms (Views: 23.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/signout" for 127.0.0.1 at 2011-09-05 08:51:20 -0400
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-05 08:51:20 -0400
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.erb (2.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (55.0ms)
+Rendered layouts/_footer.html.erb (1.6ms)
+Rendered pages/home.html.erb within layouts/application (70.1ms)
+Completed 200 OK in 75ms (Views: 74.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-09-05 08:51:22 -0400
+  Processing by UsersController#new as HTML
+Rendered shared/_error_messages.html.erb (4.2ms)
+Rendered layouts/_stylesheets.html.erb (2.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (14.9ms)
+Rendered layouts/_footer.html.erb (1.0ms)
+Rendered users/new.html.erb within layouts/application (51.6ms)
+Completed 200 OK in 140ms (Views: 63.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-09-05 08:51:43 -0400
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9vvaWVfRdr1T6vBWJ8sWHcKyIyboaTtn1C3ktLX1Mew=", "user"=>{"name"=>"Mike Sudyk", "email"=>"mikesudyk@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE (LOWER("users"."email") = LOWER('mikesudyk@gmail.com')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt") VALUES ('Mike Sudyk', 'mikesudyk@gmail.com', '2011-09-05 12:51:43.768925', '2011-09-05 12:51:43.768925', '44435a876994a116f61f986fdebe039cc57c201ef3cab92e3e057489958f7414', '8857e2b7295d88ba3c3cf931246549ac432a4a4541f6bc3503b2cf2b5b10a5a4')
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 260ms
+
+
+Started GET "/users/2" for 127.0.0.1 at 2011-09-05 08:51:43 -0400
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (1.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+Rendered layouts/_header.html.erb (3.9ms)
+Rendered layouts/_footer.html.erb (1.9ms)
+Rendered users/show.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 75ms (Views: 18.1ms | ActiveRecord: 0.9ms)
