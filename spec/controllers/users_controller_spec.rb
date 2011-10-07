@@ -18,10 +18,9 @@ describe UsersController do
         @user = test_sign_in(Factory(:user))
         second = Factory(:user, :name => "Bob", :email => "another@example.com")
         third  = Factory(:user, :name => "Ben", :email => "another@example.net")
-        
+        @users = [@user, second, third]
         30.times do
-          Factory(:user, :name => Factory.next(:name),
-                         :email => Factory.next(:email))
+          @users << Factory(:user, :email => Factory.next(:email))
         end
       end
       
@@ -198,7 +197,7 @@ describe UsersController do
     
     it "should have the right title" do
       get :edit, :id => @user
-      response.should have_selector('title', :content => "Edit user")
+      response.should have_selector('title', :content => "Edit User")
     end
     
     it "should have a link to change the Gravatar" do
@@ -229,7 +228,7 @@ describe UsersController do
       
       it "should have the right title" do
         put :update, :id => @user, :user => @attr
-        response.should have_selector('title', :content => "Edit user")
+        response.should have_selector('title', :content => "Edit User")
       end
     end
 
@@ -295,31 +294,31 @@ describe UsersController do
   end
 
   describe "DELETE 'destroy'" do
-    
+
     before(:each) do
       @user = Factory(:user)
     end
-    
+
     describe "as a non-signed-in user" do
       it "should deny access" do
         delete :destroy, :id => @user
         response.should redirect_to(signin_path)
       end
     end
-    
-    describe "as non-admin user" do
-      it "should protect the action" do
+
+    describe "as a non-admin user" do
+      it "should protect the page" do
         test_sign_in(@user)
         delete :destroy, :id => @user
         response.should redirect_to(root_path)
       end
     end
-    
+
     describe "as an admin user" do
-      
+
       before(:each) do
-        @admin = Factory(:user, :email => "admin@example.com", :admin => true)
-        test_sign_in(@admin)
+        admin = Factory(:user, :email => "admin@example.com", :admin => true)
+        test_sign_in(admin)
       end
 
       it "should destroy the user" do
@@ -327,19 +326,11 @@ describe UsersController do
           delete :destroy, :id => @user
         end.should change(User, :count).by(-1)
       end
-      
+
       it "should redirect to the users page" do
         delete :destroy, :id => @user
-        flash[:success].should =~ /destroyed/i
         response.should redirect_to(users_path)
-      end
-      
-      it "should not be able to destroy itself" do
-        lambda do
-          delete :destroy, :id => @admin
-        end.should_not change(User, :count)
       end
     end
   end
-  
 end
